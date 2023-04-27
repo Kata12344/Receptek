@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Receptcontroller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/minden', [Receptcontroller::class, 'minden']);
+Route::get('/kategoriak', [Receptcontroller::class, 'kategoriak']);
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
